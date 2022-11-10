@@ -1,0 +1,27 @@
+import replit
+from colored import fore
+import time
+
+print(fore.YELLOW + "                  ██████")
+print("                ██      ██")
+print("      ██████    ██      ██    ██████")
+print("    ██      ████          ████      ██")
+print("    ██                              ██")
+print("    ██                              ██")
+print("      ██                          ██")
+print("      ██                          ██")
+print("  ████            ██████            ████")
+print("██              ██      ██              ██")
+print("██              ██      ██              ██")
+print("██              ██      ██              ██")
+print("  ████            ██████            ████")
+print("      ██                          ██")
+print("      ██                          ██")
+print("    ██                              ██")
+print("    ██                              ██")
+print("    ██      ████          ████      ██")
+print("      ██████    ██      ██    ██████")
+print("                ██      ██")
+print("                  ██████")
+print("")
+print(fore.WHITE + "System settings")

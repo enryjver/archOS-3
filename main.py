@@ -2,83 +2,86 @@ import replit
 from colored import fore
 import time
 #mess.errore
-a="Comando non valido"
+a = "Invalid command"
 #comandi
-d="shutdown"
-e="login"
-f="bypass"
-print(fore.GREEN+"                                 _ _  ____   _____   ____  ")
-print("                                | (_)/ __ \ / ____| |___ \ ")
-print("   __ _ _ __ _ __ ___   __ _  __| |_| |  | | (___     __) |")
-print("  / _` | '__| '_ ` _ \ / _` |/ _` | | |  | |\___ \   |__ < ")
-print(" | (_| | |  | | | | | | (_| | (_| | | |__| |____) |  ___) |")
-print("  \__,_|_|  |_| |_| |_|\__,_|\__,_|_|\____/|_____/  |____/ "+fore.WHITE)
+d = "shutdown"
+e = "login"
+f = "bypass"
+print(fore.GREEN +"                 _      ____   _____   ____   ")
+print("                | |    / __ \ / ____| |___ \  ")
+print("   __ _ _ __ ___| |__ | |  | | (___     __) | ")
+print("  / _` | '__/ __| '_ \| |  | |\___ \   |__ <  ")
+print(" | (_| | | | (__| | | | |__| |____) |  ___) | ")
+print("  \__,_|_|  \___|_| |_|\____/|_____/  |____/  " +fore.WHITE)
 print("")
 print("")
-print("armadiOS 3 0.4.1")
+print("archOS 3 0.4.1")
 print("© Enrico Fracasso 2022")
 print("")
 
-account = None 
+account = None
 
-def login(): 
+
+def login():
     global account
     replit.clear()
-    user = str(input("Nome utente: ")) 
+    user = str(input("Username: "))
     passw = str(input("Password: "))
-    if user=="bachecawii":
-      print("cacca")
+    if user == "bachecawii":
+        print("cacca [easteregg]")
     if user in replit.db.keys():
-        if replit.db[user]["password"] == passw: 
-          print("Benvenuto,",user+", sto caricando il sistema...")
-          account = replit.db.get(user)
-          time.sleep(5)
-          replit.clear()
-          exec(open("sistema.py").read())
+        if replit.db[user]["password"] == passw:
+            print("Welcome,", user + ", please wait while i'm loading the system for you...")
+            account = replit.db.get(user)
+            time.sleep(5)
+            replit.clear()
+            exec(open("sistema.py").read())
         else:
-          print(fore.RED+"Password errata."+fore.WHITE)
-          time.sleep(3)
-          login()
+            print(fore.RED + "Wrong password." + fore.WHITE)
+            time.sleep(3)
+            login()
     else:
-      print(fore.RED+"Account inesistente."+fore.WHITE)
-      time.sleep(3)
-      login()
+        print(fore.RED + "This user does not exist." + fore.WHITE)
+        time.sleep(3)
+        login()
+
 
 def signup():
     global account
     replit.clear()
-    user = str(input("Nome utente: ")) 
-    passw = str(input("Password: ")) 
+    user = str(input("Username: "))
+    passw = str(input("Password: "))
 
-    if user not in replit.db.keys(): 
+    if user not in replit.db.keys():
         replit.db[user] = {
             "password": passw,
         }
-        print(fore.GREEN+"Account creato con successo!"+fore.WHITE)
+        print(fore.GREEN + "Your account was successfully created!" + fore.WHITE)
         time.sleep(2)
         account = replit.db.get(user)
-        print("Benvenuto,",user+", sto caricando il sistema...")
+        print("Welcome,", user + ", please wait while i'm loading the system for you...")
         time.sleep(5)
         account = replit.db.get(user)
         replit.clear()
         exec(open("sistema.py").read())
     else:
-        print(fore.RED+"Impossibile registrare: Account esistente."+fore.WHITE)
+        print(fore.RED + "Cannot sign-up. Account already exists." +
+              fore.WHITE)
         time.sleep(3)
         signup()
 
 
-ls = input("1.Login\n2.Registra nuovo utente\n\nScegli l'opzione desiderata: ")
+ls = input("1.Login\n2.Sign-up\n\nChoose an option: ")
 
 if ls == "1":
-  login()
+    login()
 
-elif ls=="2":
-  signup()
-elif ls==f:
-  exec(open("quack.py").read())
+elif ls == "2":
+    signup()
+elif ls == f:
+    exec(open("archcrypter.py").read())
 else:
-  print(fore.RED+"Scelta non valida."+fore.WHITE)
-  time.sleep(3)
-  replit.clear()
-  exec(open("main.py").read())
+    print(fore.RED + "Please choose a valid option." + fore.WHITE)
+    time.sleep(3)
+    replit.clear()
+    exec(open("main.py").read())
