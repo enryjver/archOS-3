@@ -46,7 +46,7 @@ elif x == i:
     replit.clear()
     print("Booting up archCrypter...")
     time.sleep(2)
-    exec(open("archCrypter.py").read())
+    exec(open("archcrypter.py").read())
 elif x == e or x == f:
     replit.clear()
     print("Returning to system menu...")

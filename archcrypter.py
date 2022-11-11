@@ -161,6 +161,7 @@ while True:
     time.sleep(2)
     replit.clear()
     exec(open("apps.py").read())
+    break
   else:
     replit.clear()
     print(fore.VIOLET+"   ,-. ,------. ,-.    ")

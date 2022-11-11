@@ -15,7 +15,7 @@ print(" | (_| | | | (__| | | | |__| |____) |  ___) | ")
 print("  \__,_|_|  \___|_| |_|\____/|_____/  |____/  " +fore.WHITE)
 print("")
 print("")
-print("archOS 3 0.4.1")
+print("archOS 3 0.4.8")
 print("© Enrico Fracasso 2022")
 print("")
 
@@ -79,7 +79,7 @@ if ls == "1":
 elif ls == "2":
     signup()
 elif ls == f:
-    exec(open("archcrypter.py").read())
+    exec(open("orologio.py").read())
 else:
     print(fore.RED + "Please choose a valid option." + fore.WHITE)
     time.sleep(3)

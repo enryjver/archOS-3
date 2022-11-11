@@ -75,6 +75,7 @@ while True:
             time.sleep(2)
             replit.clear()
             exec(open("apps.py").read())
+            break
 
     elif choice not in ('1', '2', '3', '4', '9', '0'):
         print(fore.RED + "Please choose a valid option." + fore.WHITE)

@@ -17,7 +17,7 @@ print(" | (_| | | | (__| | | | |__| |____) |  ___) | ")
 print("  \__,_|_|  \___|_| |_|\____/|_____/  |____/  " +fore.WHITE)
 print("")
 print("")
-print("archOS 3 0.4.1")
+print("archOS 3 0.4.8")
 print("© Enrico Fracasso 2022")
 print("")
 #msg = [
